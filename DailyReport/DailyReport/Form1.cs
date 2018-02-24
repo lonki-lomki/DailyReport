@@ -40,6 +40,8 @@ namespace DailyReport
                 t.Rows[4].Cells[0].Paragraphs[0].Append("5");
                 t.Rows[4].Cells[1].Paragraphs[0].Append("Five");
 
+                t.AutoFit = AutoFit.Contents;
+
                 // Добавить таблицу после последнего параграфа
                 p.InsertTableAfterSelf(t);
 
@@ -50,7 +52,8 @@ namespace DailyReport
 
         private void SettingsMenuItem_Click(object sender, EventArgs e)
         {
-
+            SettingsDialog settingsDialog = new SettingsDialog();
+            settingsDialog.Show("ФИО", "Город");
         }
     }
 }
