@@ -9,17 +9,18 @@ namespace DailyReport
             InitializeComponent();
         }
 
-        public string Show(string lastName, string city)
+        public Settings Show(Settings settings)
         {
-            textBoxLastName.Text = lastName;
-            textBoxCity.Text = city;
+            textBoxLastName.Text = settings.LastName;
+            textBoxCity.Text = settings.City;
 
             DialogResult resultCode = ShowDialog();
             if (resultCode == DialogResult.OK)
             {
-                return textBoxLastName.Text;
+                settings.LastName = textBoxLastName.Text;
+                settings.City = textBoxCity.Text;
             }
-            return string.Empty;
+            return settings;
         }
     }
 }

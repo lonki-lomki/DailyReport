@@ -33,6 +33,7 @@
             this.load = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.save = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +52,7 @@
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.load,
+            this.save,
             this.toolStripMenuItem3});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(48, 20);
@@ -77,6 +79,13 @@
             this.settingsMenuItem.Text = "Настройки";
             this.settingsMenuItem.Click += new System.EventHandler(this.SettingsMenuItem_Click);
             // 
+            // save
+            // 
+            this.save.Name = "save";
+            this.save.Size = new System.Drawing.Size(228, 22);
+            this.save.Text = "Сохранить отчет в файл";
+            this.save.Click += new System.EventHandler(this.SaveMenuItem_Click);
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(792, 470);
@@ -102,6 +111,7 @@
         private System.Windows.Forms.ToolStripMenuItem load;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem settingsMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem save;
     }
 }
 
